@@ -1,0 +1,26 @@
+{
+  "name": "crypto-transaction-server",
+  "version": "1.0.0",
+  "description": "Server side application to fetch crypto transaction of user",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushkar-jat/crypto-transaction-server.git"
+  },
+  "author": "pushkar jat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pushkar-jat/crypto-transaction-server/issues"
+  },
+  "homepage": "https://github.com/pushkar-jat/crypto-transaction-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "winston": "^3.8.1"
+  }
+}
