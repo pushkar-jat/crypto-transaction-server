@@ -21,6 +21,7 @@ Project Include azure service app for deployment, Central Logging system using w
 [✅] Task 1 - Crypto Transaction of a user fetch from etherscan and should be stored in MongoDB
 [✅] Task 2 - a system within the same server to fetch the price of Ethereum every 10 minutes and store it in the database
 [✅] Task 3 - Develop a `GET` API for a user where they give their address as an input and get their current balance and current price of ether as output.
+Note: - As mentioned in task The balance should be calculated from the transactions of the user. If the “from” address is of the user, the “value” property gets added to the user’s balance. If the “to” address is of the user, the “value” property gets deducted from the user’s balance. These transactions are the ones that were fetched in the previous tasks but for calculate current balance we need to use “from” address of the user for subtract from current balance and use “to” address of the user for added in current balance, because "to" address defined that user receive some amount and "from" address for transfer amount from address.
 [✅] Task 4 - Deployment of Mongodb on mongodb atlas cloud 
 [✅] Task 5 - Deployment of Server Side Application on azure app service 
 [✅] Centralized log monitoring system for complete application using winston 
