@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 app.use('/public', express.static(path.join(__dirname, '/public')))
 app.set('view engine', 'ejs');
 
+const userRoute = require('./routers/transaction') 
+
 const connect = mongoose.connect(process.env.MONGOOSE_STRING)
 
 connect
@@ -28,6 +30,9 @@ connect
 .catch((err) => {
     logger.error(`Connected to db failed due to ${err}`);
 })
+
+
+app.use('/api/user', userRoute) 
 
 app.listen(process.env.PORT, () => {
     logger.info(`Server is running on PORT ${process.env.PORT}`);
