@@ -5,6 +5,6 @@ const router = express.Router()
  
 router.get('/:userAddress', userController.postTransactions)
 
-router.get('/get-price/:userAddress', userController.getTransactions)
+router.get('/get-balance/:userAddress', userController.getTransactions)
 
 module.exports = router
