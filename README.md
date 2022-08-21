@@ -39,8 +39,30 @@ Note: - As mentioned in task The balance should be calculated from the transacti
 
 ## Deployed URL
 ``` 
-Backend - https://recrutment-bot.azurewebsites.net/api/messages
+Backend - https://recrutment-bot.azurewebsites.net/
 ```
+</br>
+
+## API
+
+# get balance of user using user address
+
+curl --location --request GET 'https://recrutment-bot.azurewebsites.net/api/user/get-balance/0xce94e5621a5f7068253c42558c147480f38b5e0d' \
+--header 'Content-Type: application/json' \
+--header 'token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmRlNDU4Y2E5MTRlOWYzMGY0OThiMiIsImVtYWlsIjoidXNlcjJAaGV5aGV5LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjYwODI3NzE0fQ.DxmDz-iLb-MLg5Ioyk96kfd0g92GSK5jDWB7JPHz-gM' \
+--header 'Cookie: ARRAffinity=4a9e09c71ed298fc04c8a460a0cb9303cf0f80e7ca973a58889877914f5e9096; ARRAffinitySameSite=4a9e09c71ed298fc04c8a460a0cb9303cf0f80e7ca973a58889877914f5e9096' \
+--data-raw ''
+
+</br>
+
+# get transaction of user using user address and store in database
+
+curl --location --request GET 'https://recrutment-bot.azurewebsites.net/api/user/0xce94e5621a5f7068253c42558c147480f38b5e0d' \
+--header 'Content-Type: application/json' \
+--header 'token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmRlNDU4Y2E5MTRlOWYzMGY0OThiMiIsImVtYWlsIjoidXNlcjJAaGV5aGV5LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjYwODI3NzE0fQ.DxmDz-iLb-MLg5Ioyk96kfd0g92GSK5jDWB7JPHz-gM' \
+--header 'Cookie: ARRAffinity=4a9e09c71ed298fc04c8a460a0cb9303cf0f80e7ca973a58889877914f5e9096; ARRAffinitySameSite=4a9e09c71ed298fc04c8a460a0cb9303cf0f80e7ca973a58889877914f5e9096' \
+--data-raw ''
+</br>
 
 ## Installation: <i id="installation"></i> 
 ```
