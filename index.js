@@ -5,6 +5,7 @@ const cors = require('cors')
 const path = require('path')
 const bodyParser = require('body-parser')
 const winston = require("winston");
+const { postEthPrice } = require('./services/updatePrice')
 
 
 //logger initialize for centralize log monitoring system
@@ -31,6 +32,16 @@ connect
     logger.error(`Connected to db failed due to ${err}`);
 })
 
+// update ethereum price in every 10 minutes
+var now = new Date();
+var min = now.getMinutes();
+var startIn = 1 - (min % 2); 
+setTimeout(runInterval, startIn * 60 * 1000);
+function runInterval() {
+    setInterval(function() {
+        postEthPrice()
+    }, 1 * 60 * 1000);
+} 
 
 app.use('/api/user', userRoute) 
 

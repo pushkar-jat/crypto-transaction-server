@@ -21,6 +21,8 @@ module.exports.getPrice = async function () {
       return price;
   } catch (err) {
     logger.error(`get price api failed due to error:${err}`);
+    return err
+
   }
 };
  
