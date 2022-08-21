@@ -35,12 +35,12 @@ connect
 // update ethereum price in every 10 minutes
 var now = new Date();
 var min = now.getMinutes();
-var startIn = 1 - (min % 2); 
+var startIn = 10 - (min % 2); 
 setTimeout(runInterval, startIn * 60 * 1000);
 function runInterval() {
     setInterval(function() {
         postEthPrice()
-    }, 1 * 60 * 1000);
+    }, 10 * 60 * 1000);
 } 
 
 app.use('/api/user', userRoute) 
